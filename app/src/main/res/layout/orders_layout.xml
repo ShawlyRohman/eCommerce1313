@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         >
         <TextView
             android:id="@+id/order_user_name"
