@@ -55,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
         String phone = InputPhoneNumber.getText().toString();
         String password = InputPassword.getText().toString();
 
+        //We have to check if any of this are empty or not
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(this, "Please write your name...", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(phone)) {
@@ -68,6 +69,10 @@ public class RegisterActivity extends AppCompatActivity {
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
+            //checking phone number validation
+            //the phone number is already exist or not in database
+            //if exists then it will not create the account
+            //else it will create the account
             ValidatephoneNumber(name, phone, password);
         }
     }
