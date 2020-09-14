@@ -121,6 +121,8 @@ public class LoginActivity extends AppCompatActivity {
         //Working on if Remember me or not
         if(chkBoxRememberMe.isChecked())
         {
+
+
             Paper.book().write(Prevalent.UserPhoneKey, phone);
             //it will store in user phone memory
             Paper.book().write(Prevalent.UserPasswordKey, password);
@@ -172,6 +174,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }
                 //if account do not exists then display this toast message
+                //create a new account
                 else
                 {
                     Toast.makeText(LoginActivity.this, "Account with this " + phone + " number do not exists.", Toast.LENGTH_SHORT).show();

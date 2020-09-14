@@ -91,6 +91,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (!(snapshot.child("Users").child(phone).exists()))
                 {
                     //if phone number is not exists
+                    //storing inside firebase database
                     HashMap<String, Object> userdataMap = new HashMap<>();
                     userdataMap.put("phone", phone);
                     userdataMap.put("password", password);
@@ -108,6 +109,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         Toast.makeText(RegisterActivity.this, "Congratulations, your account has been created.", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
+                                        //if account created successfully then it will go to login activity
                                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         startActivity(intent);
                                     }
